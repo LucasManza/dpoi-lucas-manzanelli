@@ -1,17 +1,21 @@
 :root {
     --bg-dark-color: #24305E;
     --bg-ligth-color: #A8D0E6;
-    --success-color: #a5f7a1;
+    --success-color: #6DF794;
     --primary-color: #F76C6C;
     --warning-color: #F8E9A1;
-    --danger-color: #F76C6C;
+    --danger-color: #54B8F7;
 
     --font-normal-size: 16px
 }
 
 body {
     background: var(--bg-dark-color);
-    color: #8792cb;
+    color: #a0aced;
+}
+
+a, li {
+    font-style: italic;
 }
 
 a {
@@ -29,23 +33,41 @@ h1, h2 {
     font-weight: bold;
 }
 
-h3 {
+h3, h4 {
     font-weight: bold;
     color: white;
+}
+
+h4 {
+    font-style: italic;
 }
 
 
 /*TABLE STYLES*/
 table {
-    border: 2px solid white;
-    border-radius: 10px;
+    width: 100%;
+}
+
+th {
+    color: var(--primary-color);
+}
+
+td {
     color: white;
 }
 
-thead {
+td, th, table {
+    border-collapse: collapse;
+    border: 3px solid white;
+    text-align: center;
+}
+
+table i {
+    cursor: pointer;
 }
 
 /*INPUTS STYLES*/
+
 .input-content {
     display: flex;
     flex-direction: row;
@@ -84,7 +106,6 @@ input, textarea {
     border: none;
     font-size: var(--font-normal-size);
 }
-
 
 select {
     height: 100%;

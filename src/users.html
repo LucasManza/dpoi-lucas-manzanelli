@@ -65,68 +65,70 @@
         <section>
             <h3>Personal Data</h3>
             <div class="form-column">
-                <div class="costume-input">
-                    <label for="name">Name</label>
-                    <input id="name" type="text">
+                <div class="input-content">
+                    <div class="input-label"><label for="name">Name</label></div>
+                    <div class="costume-input"><input id="name" type="text"></div>
                 </div>
-                <div class="costume-input">
-                    <label for="surname">Surname</label>
-                    <input id="surname" type="text">
+                <div class="input-content">
+                    <div class="input-label"><label for="surname">Surname</label></div>
+                    <div class="costume-input"><input id="surname" type="text"></div>
                 </div>
-                <div class="costume-input">
-                    <label for="mail">Mail</label>
-                    <input id="mail" type="text">
+                <div class="input-content">
+                    <div class="input-label"><label for="mail">Mail</label></div>
+                    <div class="costume-input"><input id="mail" type="text"></div>
                 </div>
-                <div class="costume-input">
-                    <label for="phone">Phone</label>
-                    <input id="phone" type="text">
+                <div class="input-content">
+                    <div class="input-label"><label for="phone">Phone</label></div>
+                    <div class="costume-input"><input id="phone" type="text"></div>
                 </div>
             </div>
         </section>
         <section>
             <h3>Direction Data</h3>
             <div class="form-column">
-                <div class="costume-input">
-                    <label for="street">Street</label>
-                    <input id="street" type="text">
+                <div class="input-content">
+                    <div class="input-label"><label for="street">Street</label></div>
+                    <div class="costume-input"><input id="street" type="text"></div>
                 </div>
-                <div class="costume-input">
-                    <label for="provinces">Province</label>
+                <div class="input-content">
+                    <div class="input-label"><label for="provinces">Province</label></div>
                     <select id="provinces">
                         <option value="buenosAires">Buenos Aires</option>
                         <option value="cordoba">Córdoba</option>
                         <option value="mendoza">Mendoza</option>
                     </select>
                 </div>
-                <div class="costume-input">
-                    <label for="postalCode">Postal Code</label>
-                    <input id="postalCode" type="text">
+                <div class="input-content">
+                    <div class="input-label"><label for="postalCode">Postal</label></div>
+                    <div class="costume-input"><input id="postalCode" type="text"></div>
                 </div>
             </div>
         </section>
         <section>
             <h3>Other Data</h3>
             <div class="form-column">
-                <div class="costume-input">
-                    <label for="birth">Date of birth</label>
-                    <input id="birth" type="text" maxlength="10">
+                <div class="input-content">
+                    <div class="input-label"><label for="birth">Date of birth</label></div>
+                    <div class="costume-input"><input id="birth" type="text" maxlength="10"></div>
                 </div>
-                <div class="costume-input">
-                    Marital Status:
-                    <input type="radio" id="single" name="maritalStatus" value="single" checked>
-                    <label for="single">Single</label>
-                    <input type="radio" id="married" name="maritalStatus" value="married">
-                    <label for="married">Married</label>
+                <div class="input-content">
+                    <div class="input-label">
+                        Marital Status
+                    </div>
+                    <div class="input-content-radio">
+                        <input class="input-radio" type="radio" id="single" name="maritalStatus" value="single" checked>
+                        <label class="input-radio-label" for="single">Single</label>
+                        <input class="input-radio" type="radio" id="married" name="maritalStatus" value="married">
+                        <label class="input-radio-label" for="married">Married</label>
+                    </div>
                 </div>
-                <div class="costume-input">
-                    <label for="photo">Photo</label>
-                    <input type="file" id="photo" accept="image/*">
+                <div class="input-content">
+                    <div class="input-label"><label for="photo">Photo</label></div>
+                    <div class="costume-input"><input class="input-files" type="file" id="photo" accept="image/*"></div>
                 </div>
-                <div class="costume-input">
-                    <label for="description">Description</label>
-                </div>
-                <div class="costume-input">
-                    <textarea name="description" id="description"></textarea>
+                <div class="input-content">
+                    <div class="input-label"><label for="description">Description</label></div>
+                    <div class="costume-input"><textarea name="description" id="description"></textarea></div>
                 </div>
             </div>
         </section>

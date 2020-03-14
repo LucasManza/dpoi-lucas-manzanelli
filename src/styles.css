@@ -1,11 +1,11 @@
 form {
     display: grid;
-    grid-template-columns: auto auto auto;
-    row-gap: 10px;
+    grid-template-columns: 1fr 1fr 2fr;
+    column-gap: 30px;
 }
 
 .form-column {
     display: grid;
-    grid-template-columns: auto ;
-    row-gap: 10px;
+    grid-template-columns: auto;
+    row-gap: 15px;
 }

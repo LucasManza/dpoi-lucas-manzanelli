@@ -4,6 +4,8 @@
     <title>DPOI-2020</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <section>
@@ -62,69 +64,75 @@
     <form>
         <section>
             <h3>Personal Data</h3>
-            <div>
-                <label for="name">Name</label>
-                <input id="name" type="text">
-            </div>
-            <div>
-                <label for="surname">Surname</label>
-                <input id="surname" type="text">
-            </div>
-            <div>
-                <label for="mail">Mail</label>
-                <input id="mail" type="text">
-            </div>
-            <div>
-                <label for="phone">Phone</label>
-                <input id="phone" type="text">
+            <div class="form-column">
+                <div class="costume-input">
+                    <label for="name">Name</label>
+                    <input id="name" type="text">
+                </div>
+                <div class="costume-input">
+                    <label for="surname">Surname</label>
+                    <input id="surname" type="text">
+                </div>
+                <div class="costume-input">
+                    <label for="mail">Mail</label>
+                    <input id="mail" type="text">
+                </div>
+                <div class="costume-input">
+                    <label for="phone">Phone</label>
+                    <input id="phone" type="text">
+                </div>
             </div>
         </section>
         <section>
             <h3>Direction Data</h3>
-            <div>
-                <label for="street">Street</label>
-                <input id="street" type="text">
-            </div>
-            <div>
-                <label for="provinces">Province</label>
-                <select id="provinces">
-                    <option value="buenosAires">Buenos Aires</option>
-                    <option value="cordoba">Córdoba</option>
-                    <option value="mendoza">Mendoza</option>
-                </select>
-            </div>
-            <div>
-                <label for="postalCode">Postal Code</label>
-                <input id="postalCode" type="text">
+            <div class="form-column">
+                <div class="costume-input">
+                    <label for="street">Street</label>
+                    <input id="street" type="text">
+                </div>
+                <div class="costume-input">
+                    <label for="provinces">Province</label>
+                    <select id="provinces">
+                        <option value="buenosAires">Buenos Aires</option>
+                        <option value="cordoba">Córdoba</option>
+                        <option value="mendoza">Mendoza</option>
+                    </select>
+                </div>
+                <div class="costume-input">
+                    <label for="postalCode">Postal Code</label>
+                    <input id="postalCode" type="text">
+                </div>
             </div>
         </section>
         <section>
             <h3>Other Data</h3>
-            <div>
-                <label for="birth">Date of birth</label>
-                <input id="birth" type="text" maxlength="10">
-            </div>
-            <div>
-                Marital Status:
-                <input type="radio" id="single" name="maritalStatus" value="single" checked>
-                <label for="single">Single</label>
-                <input type="radio" id="married" name="maritalStatus" value="married">
-                <label for="married">Married</label>
-            </div>
-            <div>
-                <label for="photo">Photo</label>
-                <input type="file" id="photo" accept="image/*">
-            </div>
-            <div>
-                <label for="description">Description</label>
-            </div>
-            <div>
-                <textarea name="description" id="description"></textarea>
+            <div class="form-column">
+                <div class="costume-input">
+                    <label for="birth">Date of birth</label>
+                    <input id="birth" type="text" maxlength="10">
+                </div>
+                <div class="costume-input">
+                    Marital Status:
+                    <input type="radio" id="single" name="maritalStatus" value="single" checked>
+                    <label for="single">Single</label>
+                    <input type="radio" id="married" name="maritalStatus" value="married">
+                    <label for="married">Married</label>
+                </div>
+                <div class="costume-input">
+                    <label for="photo">Photo</label>
+                    <input type="file" id="photo" accept="image/*">
+                </div>
+                <div class="costume-input">
+                    <label for="description">Description</label>
+                </div>
+                <div class="costume-input">
+                    <textarea name="description" id="description"></textarea>
+                </div>
             </div>
         </section>
         <div>
-            <input type="submit" value="Submit">
-            <input type="submit" value="Cancel">
+            <input class="primary-button" type="submit" value="Submit">
+            <input class="danger-button" type="submit" value="Cancel">
         </div>
     </form>
 </section>

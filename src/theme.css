@@ -1,0 +1,86 @@
+:root {
+    --bg-dark-color: #24305E;
+    --bg-ligth-color: #A8D0E6;
+    --success-color: #a5f7a1;
+    --primary-color: #F76C6C;
+    --warning-color: #F8E9A1;
+    --danger-color: #F76C6C;
+}
+
+body {
+    background: var(--bg-dark-color);
+    color: #8792cb;
+}
+
+a {
+    color: var(--warning-color);
+}
+
+li {
+    color: var(--primary-color);
+}
+
+/*TITLES*/
+h1, h2 {
+    font-family: "Roboto Light", monospace;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+h3 {
+    font-weight: bold;
+    color: white;
+}
+
+
+/*TABLE STYLES*/
+table {
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+}
+
+thead {
+}
+
+/*INPUTS STYLES*/
+.costume-input {
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    height: 100%;
+    background: none;
+    color: white;
+    border: none;
+}
+
+
+/*BUTTONS STYLES*/
+.primary-button {
+    color: var(--success-color);
+    border-color: var(--success-color);
+    background: none;
+}
+
+.danger-button {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    background: none;
+}
+
+.primary-button, .danger-button {
+    font-weight: bold;
+    font-size: 16px;
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    border-style: solid;
+}
+

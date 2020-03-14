@@ -1,0 +1,11 @@
+form {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 10px;
+}
+
+.form-column {
+    display: grid;
+    grid-template-columns: auto ;
+    row-gap: 10px;
+}

@@ -1,0 +1,24 @@
+html {
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    min-height: 100vh;
+    margin: 0;
+
+}
+
+
+body section div {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.concept-section {
+    max-height: 600px;
+    overflow-y: scroll;
+}
+

@@ -17,7 +17,7 @@ body div {
     flex-direction: column;
 }
 
- .content {
+.content {
     max-height: 500px;
     overflow-y: scroll;
 }

@@ -6,137 +6,156 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="../theme.css">
     <link rel="stylesheet" href="../styles.css">
+<!--        <link rel="stylesheet" href="vertical.css">-->
+    <link rel="stylesheet" href="horizontal.css">
 </head>
 <body>
-<section>
-    <h2>Users</h2>
-    <table>
-        <thead>
-        <tr>
-            <th rowspan="2" scope="col">Firstname</th>
-            <th rowspan="2" scope="col">Lastname</th>
-            <th rowspan="2" scope="col">Mail</th>
-            <th rowspan="2" scope="col">Phone</th>
-            <th colspan="3">Actions</th>
-        </tr>
-        <tr>
-            <th>View</th>
-            <th>Edit</th>
-            <th>Delete</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Pedro</td>
-            <td>Colunga</td>
-            <td>xx@yy.com</td>
-            <td>1153107654</td>
-            <td>
-                <i class="fas fa-calendar-alt"></i>
-            </td>
-            <td>
-                <i class="fas fa-edit"></i>
-            </td>
-            <td>
-                <i class="fas fa-trash"></i>
-            </td>
-        </tr>
-        <tr>
-            <td>Agustín</td>
-            <td>López Gabeiras</td>
-            <td>xx@yy.com</td>
-            <td>1153107654</td>
-            <td>
-                <i class="fas fa-calendar-alt"></i>
-            </td>
-            <td>
-                <i class="fas fa-edit"></i>
-            </td>
-            <td>
-                <i class="fas fa-trash"></i>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-</section>
-<section>
-    <h2>New User</h2>
-    <form>
-        <section>
-            <h3>Personal Data</h3>
-            <div class="form-column">
-                <div class="input-content">
-                    <div class="input-label"><label for="name">Name</label></div>
-                    <div class="costume-input"><input id="name" type="text"></div>
-                </div>
-                <div class="input-content">
-                    <div class="input-label"><label for="surname">Surname</label></div>
-                    <div class="costume-input"><input id="surname" type="text"></div>
-                </div>
-                <div class="input-content">
-                    <div class="input-label"><label for="mail">Mail</label></div>
-                    <div class="costume-input"><input id="mail" type="text"></div>
-                </div>
-                <div class="input-content">
-                    <div class="input-label"><label for="phone">Phone</label></div>
-                    <div class="costume-input"><input id="phone" type="text"></div>
-                </div>
-            </div>
+<h1>DPOI-Practice</h1>
+<div>
+    <section>
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="#users">
+                Users
+            </a></li>
+            <li><a href="#newUser">New User</a></li>
+        </ul>
+    </section>
+    <section class="content">
+        <section id="users">
+            <h2>Users</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th rowspan="2" scope="col">Firstname</th>
+                    <th rowspan="2" scope="col">Lastname</th>
+                    <th rowspan="2" scope="col">Mail</th>
+                    <th rowspan="2" scope="col">Phone</th>
+                    <th colspan="3">Actions</th>
+                </tr>
+                <tr>
+                    <th>View</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Pedro</td>
+                    <td>Colunga</td>
+                    <td>xx@yy.com</td>
+                    <td>1153107654</td>
+                    <td>
+                        <i class="fas fa-calendar-alt"></i>
+                    </td>
+                    <td>
+                        <i class="fas fa-edit"></i>
+                    </td>
+                    <td>
+                        <i class="fas fa-trash"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Agustín</td>
+                    <td>López Gabeiras</td>
+                    <td>xx@yy.com</td>
+                    <td>1153107654</td>
+                    <td>
+                        <i class="fas fa-calendar-alt"></i>
+                    </td>
+                    <td>
+                        <i class="fas fa-edit"></i>
+                    </td>
+                    <td>
+                        <i class="fas fa-trash"></i>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
         </section>
-        <section>
-            <h3>Direction Data</h3>
-            <div class="form-column">
-                <div class="input-content">
-                    <div class="input-label"><label for="street">Street</label></div>
-                    <div class="costume-input"><input id="street" type="text"></div>
-                </div>
-                <div class="input-content">
-                    <div class="input-label"><label for="provinces">Province</label></div>
-                    <select id="provinces">
-                        <option value="buenosAires">Buenos Aires</option>
-                        <option value="cordoba">Córdoba</option>
-                        <option value="mendoza">Mendoza</option>
-                    </select>
-                </div>
-                <div class="input-content">
-                    <div class="input-label"><label for="postalCode">Postal</label></div>
-                    <div class="costume-input"><input id="postalCode" type="text"></div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <h3>Other Data</h3>
-            <div class="form-column">
-                <div class="input-content">
-                    <div class="input-label"><label for="birth">Date of birth</label></div>
-                    <div class="costume-input"><input id="birth" type="text" maxlength="10"></div>
-                </div>
-                <div class="input-content">
-                    <div class="input-label">
-                        Marital Status
+        <section id="newUser">
+            <h2>New User</h2>
+            <form>
+                <section>
+                    <h3>Personal Data</h3>
+                    <div class="form-column">
+                        <div class="input-content">
+                            <div class="input-label"><label for="name">Name</label></div>
+                            <div class="costume-input"><input id="name" type="text"></div>
+                        </div>
+                        <div class="input-content">
+                            <div class="input-label"><label for="surname">Surname</label></div>
+                            <div class="costume-input"><input id="surname" type="text"></div>
+                        </div>
+                        <div class="input-content">
+                            <div class="input-label"><label for="mail">Mail</label></div>
+                            <div class="costume-input"><input id="mail" type="text"></div>
+                        </div>
+                        <div class="input-content">
+                            <div class="input-label"><label for="phone">Phone</label></div>
+                            <div class="costume-input"><input id="phone" type="text"></div>
+                        </div>
                     </div>
-                    <div class="input-content-radio">
-                        <input class="input-radio" type="radio" id="single" name="maritalStatus" value="single" checked>
-                        <label class="input-radio-label" for="single">Single</label>
-                        <input class="input-radio" type="radio" id="married" name="maritalStatus" value="married">
-                        <label class="input-radio-label" for="married">Married</label>
+                </section>
+                <section>
+                    <h3>Direction Data</h3>
+                    <div class="form-column">
+                        <div class="input-content">
+                            <div class="input-label"><label for="street">Street</label></div>
+                            <div class="costume-input"><input id="street" type="text"></div>
+                        </div>
+                        <div class="input-content">
+                            <div class="input-label"><label for="provinces">Province</label></div>
+                            <select id="provinces">
+                                <option value="buenosAires">Buenos Aires</option>
+                                <option value="cordoba">Córdoba</option>
+                                <option value="mendoza">Mendoza</option>
+                            </select>
+                        </div>
+                        <div class="input-content">
+                            <div class="input-label"><label for="postalCode">Postal</label></div>
+                            <div class="costume-input"><input id="postalCode" type="text"></div>
+                        </div>
                     </div>
+                </section>
+                <section>
+                    <h3>Other Data</h3>
+                    <div class="form-column">
+                        <div class="input-content">
+                            <div class="input-label"><label for="birth">Date of birth</label></div>
+                            <div class="costume-input"><input id="birth" type="text" maxlength="10"></div>
+                        </div>
+                        <div class="input-content">
+                            <div class="input-label">
+                                Marital Status
+                            </div>
+                            <div class="input-content-radio">
+                                <input class="input-radio" type="radio" id="single" name="maritalStatus" value="single"
+                                       checked>
+                                <label class="input-radio-label" for="single">Single</label>
+                                <input class="input-radio" type="radio" id="married" name="maritalStatus"
+                                       value="married">
+                                <label class="input-radio-label" for="married">Married</label>
+                            </div>
+                        </div>
+                        <div class="input-content">
+                            <div class="input-label"><label for="photo">Photo</label></div>
+                            <div class="costume-input"><input class="input-files" type="file" id="photo"
+                                                              accept="image/*"></div>
+                        </div>
+                        <div class="input-content">
+                            <div class="input-label"><label for="description">Description</label></div>
+                            <div class="costume-input"><textarea name="description" id="description"></textarea></div>
+                        </div>
+                    </div>
+                </section>
+                <div>
+                    <input class="primary-button" type="submit" value="Submit">
+                    <input class="danger-button" type="submit" value="Cancel">
                 </div>
-                <div class="input-content">
-                    <div class="input-label"><label for="photo">Photo</label></div>
-                    <div class="costume-input"><input class="input-files" type="file" id="photo" accept="image/*"></div>
-                </div>
-                <div class="input-content">
-                    <div class="input-label"><label for="description">Description</label></div>
-                    <div class="costume-input"><textarea name="description" id="description"></textarea></div>
-                </div>
-            </div>
+            </form>
         </section>
-        <div>
-            <input class="primary-button" type="submit" value="Submit">
-            <input class="danger-button" type="submit" value="Cancel">
-        </div>
-    </form>
-</section>
+    </section>
+</div>
 </body>
 </html>

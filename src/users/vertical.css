@@ -1,0 +1,23 @@
+html {
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    min-height: 100vh;
+    margin: 0;
+
+}
+
+
+body div {
+    display: flex;
+    flex-direction: column;
+}
+
+ .content {
+    max-height: 500px;
+    overflow-y: scroll;
+}

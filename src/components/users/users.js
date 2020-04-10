@@ -24,7 +24,7 @@ const renderUserRow = (userModel) => {
 
 };
 
-const renderUserLoading = () => {
+const renderUsersLoading = () => {
     const section = document.getElementById('users');
 
     const loader = document.createElement('div');
@@ -37,17 +37,36 @@ const renderUserLoading = () => {
     section.insertAdjacentElement('beforeend', loadContainer);
 };
 
-const destroyUserLoading = () => {
-    const loader = document.querySelector('.loader-container');
-    loader.parentNode.removeChild(loader);
+const renderNoneUsers = () => {
+    const section = document.getElementById('users');
+
+    const div = document.createElement('div');
+    div.className = 'loader-container';
+
+    const span = document.createElement('span');
+    span.appendChild(document.createTextNode('None Users found!'));
+
+    div.appendChild(span);
+
+    section.insertAdjacentElement('beforeend', div);
+};
+
+const destroyElement = (elementClass) => {
+    const element = document.querySelector(elementClass);
+    if (element) element.parentNode.removeChild(element);
 };
 
 //EXECUTION
-renderUserLoading();
+renderUsersLoading();
 
 const userService = new UserService();
 
 userService.requestUsers().then(users => {
-    users.forEach(u => renderUserRow(u));
-    destroyUserLoading();
+    if (users.length === 0)
+        renderNoneUsers();
+    else {
+        users.forEach(u => renderUserRow(u));
+        destroyElement('loader-container');
+    }
+    destroyElement('.loader-container');
 });

@@ -79,6 +79,8 @@ table i {
 .costume-label {
     display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: center;
     font-weight: bold;
     padding: 0 10px;
     min-width: 30%;

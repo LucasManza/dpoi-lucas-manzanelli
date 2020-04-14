@@ -68,26 +68,21 @@ table i {
 
 /*INPUTS STYLES*/
 
-.input-content {
+.costume-input-content {
     display: flex;
     flex-direction: row;
     border: 2px solid white;
     border-radius: 5px;
-    justify-content: space-between;
+    justify-content: stretch;
 }
 
-.input-label {
+.costume-label {
     display: flex;
     justify-content: center;
     font-weight: bold;
     padding: 0 10px;
     min-width: 30%;
     background: white;
-}
-
-.costume-input {
-    padding: 0 10px;
-    width: 100%;
 }
 
 .input-content-radio {
@@ -100,6 +95,7 @@ table i {
 
 input, textarea {
     width: 100%;
+    padding: 0 5px;
     outline: none;
     background: none;
     color: white;

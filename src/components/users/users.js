@@ -1,4 +1,5 @@
 import {UserService} from "../../shared/services/user.service.js";
+import {UserModel} from "../../shared/models/user.model.js";
 
 //INTERNAL FUNCTIONS
 const icon = (fasItem) => {
@@ -61,6 +62,20 @@ renderUsersLoading();
 
 const userService = new UserService();
 
+// userService.postUser(new UserModel(
+//     'Lucas',
+//     'Manzanelli',
+//     'l@l',
+//     '1133151180',
+//     '1',
+//     'Buenos Aires',
+//     '1666',
+//     '14/07/1995',
+//     'Single',
+//     'des',
+// ))
+//     .then(res => console.log(res))
+
 userService.requestUsers().then(users => {
     if (users.length === 0)
         renderNoneUsers();
@@ -70,3 +85,4 @@ userService.requestUsers().then(users => {
     }
     destroyElement('.loader-container');
 });
+

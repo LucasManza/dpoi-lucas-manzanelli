@@ -21,3 +21,9 @@ body div {
     max-height: 500px;
     overflow-y: scroll;
 }
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

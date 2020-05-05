@@ -1,14 +1,20 @@
-import {SimpleUserModel} from "../models/simple-user.model.js";
+import {UserModel} from "../models/user.model.js";
 
 const url = 'http://dpoi2012api.appspot.com/api/1.0';
 
 const parseJSON = json => {
     console.log('JSON RESPONSE', json);
-    return new SimpleUserModel(
+    return new UserModel(
         json.firstName,
         json.lastName,
         json.mail,
         json.phone,
+        json.street,
+        json.province,
+        json.postalCode,
+        json.birthDate,
+        json.single,
+        json.description,
         json.id
     );
 };

@@ -21,21 +21,23 @@ class Users {
         return icon;
     };
 
-    renderUserRow(simpleUserModel) {
+    renderUserRow(userModel) {
         const tbody = document.getElementById('usersTable')
             .getElementsByTagName('tbody')[0];
 
         const row = tbody.insertRow();
-        row.insertCell().appendChild(document.createTextNode(simpleUserModel.firstName));
-        row.insertCell().appendChild(document.createTextNode(simpleUserModel.lastName));
-        row.insertCell().appendChild(document.createTextNode(simpleUserModel.mail));
-        row.insertCell().appendChild(document.createTextNode(simpleUserModel.phone));
+        row.insertCell().appendChild(document.createTextNode(userModel.firstName));
+        row.insertCell().appendChild(document.createTextNode(userModel.lastName));
+        row.insertCell().appendChild(document.createTextNode(userModel.mail));
+        row.insertCell().appendChild(document.createTextNode(userModel.phone));
 
         row.insertCell().appendChild(this.icon('fa-calendar-alt'));
-        row.insertCell().appendChild(this.icon('fa-edit'));
+        row.insertCell().appendChild(this.icon('fa-edit')).addEventListener('click',()=>{
+            this.editUser()
+        });
         row.insertCell().appendChild(this.icon('fa-trash'))
             .addEventListener("click", () => {
-                this.deleteUser(simpleUserModel.id)
+                this.deleteUser(userModel.id)
             });
     };
 
@@ -71,6 +73,8 @@ class Users {
         if (element) element.parentNode.removeChild(element);
     };
 
+    //Main methods
+
     subscribeForm() {
         document.getElementById('submitUser').addEventListener('click', event => {
             event.preventDefault();
@@ -84,7 +88,7 @@ class Users {
             const birth = document.getElementById("birth").value;
             const single = document.getElementById("single").checked;
             const description = document.getElementById("description").value;
-            this.userModel = new UserModel(firstName, lastName, mail, phone, street, province, postalCode, birth, single, description);
+            this.userModel = new UserModel(firstName, lastName, mail, phone, street, province, postalCode, birth, single, description, this.userModel.id);
             console.log("User model", this.userModel)
             this.postUser(this.userModel)
         })
@@ -98,7 +102,24 @@ class Users {
         })
     }
 
-    //Internal methods
+    editUser(userModel) {
+        this.userModel = userModel;
+        document.getElementById("firstName").value = this.userModel.firstName;
+        document.getElementById("lastName").value = this.userModel.lastName;
+        document.getElementById("mail").value = this.userModel.mail;
+        document.getElementById("phone").value = this.userModel.phone;
+        document.getElementById("street").value = this.userModel.street;
+        document.getElementById("provinces").value = this.userModel.province;
+        document.getElementById("postalCode").value = this.userModel.postalCode;
+        document.getElementById("birth").value = this.userModel.birthDate;
+        if (this.userModel.single)
+            document.getElementById("single").checked = true;
+        else
+            document.getElementById("married").checked = true;
+
+        document.getElementById("description").value = this.userModel.description;
+
+    }
 
     getAllUsers() {
         this.renderLoading();

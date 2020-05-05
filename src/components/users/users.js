@@ -1,11 +1,14 @@
 import {UserService} from "../../shared/services/user.service.js";
+import {emptyUser, UserModel} from "../../shared/models/user.model.js";
 
 
 class Users {
     userService = new UserService();
+    userModel = emptyUser();
 
     constructor() {
         this.getAllUsers();
+        this.subscribeForm();
     }
 
     //Renderer DOM Methods
@@ -67,6 +70,24 @@ class Users {
         if (element) element.parentNode.removeChild(element);
     };
 
+    subscribeForm() {
+        document.getElementById('submitUser').addEventListener('click', event => {
+            event.preventDefault();
+            const firstName = document.getElementById("firstName").value;
+            const lastName = document.getElementById("lastName").value;
+            const mail = document.getElementById("mail").value;
+            const phone = document.getElementById("phone").value;
+            const street = document.getElementById("street").value;
+            const provinces = document.getElementById("provinces").value;
+            const postalCode = document.getElementById("postalCode").value;
+            const birth = document.getElementById("birth").value;
+            const single = document.getElementById("single").value;
+            const description = document.getElementById("description").value;
+            this.userModel = new UserModel(firstName, lastName, mail, phone, street, provinces, postalCode, birth, single, description);
+            console.log("User model", this.userModel)
+        })
+    }
+
     //Internal methods
 
     getAllUsers() {
@@ -87,9 +108,10 @@ class Users {
             .then(() => this.getAllUsers())
     }
 
-    submitUser(userModel) {
-        this.userService.postUser(userModel)
-            .then(() => this.getAllUsers())
+    postUser(userModel) {
+
+        // this.userService.postUser(userModel)
+        //     .then(() => this.getAllUsers())
     }
 
 }

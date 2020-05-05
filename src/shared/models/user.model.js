@@ -18,3 +18,12 @@ export class UserModel {
     }
 
 }
+
+export const emptyUser = () => {
+    return new UserModel(
+        undefined, undefined,
+        undefined, undefined,
+        undefined, undefined,
+        undefined, undefined,
+        undefined, undefined,)
+}

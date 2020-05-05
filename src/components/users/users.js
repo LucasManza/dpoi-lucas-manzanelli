@@ -9,6 +9,7 @@ class Users {
     constructor() {
         this.getAllUsers();
         this.subscribeForm();
+        this.subscribeCancel();
     }
 
     //Renderer DOM Methods
@@ -78,13 +79,22 @@ class Users {
             const mail = document.getElementById("mail").value;
             const phone = document.getElementById("phone").value;
             const street = document.getElementById("street").value;
-            const provinces = document.getElementById("provinces").value;
+            const province = document.getElementById("provinces").value;
             const postalCode = document.getElementById("postalCode").value;
             const birth = document.getElementById("birth").value;
-            const single = document.getElementById("single").value;
+            const single = document.getElementById("single").checked;
             const description = document.getElementById("description").value;
-            this.userModel = new UserModel(firstName, lastName, mail, phone, street, provinces, postalCode, birth, single, description);
+            this.userModel = new UserModel(firstName, lastName, mail, phone, street, province, postalCode, birth, single, description);
             console.log("User model", this.userModel)
+            this.postUser(this.userModel)
+        })
+    }
+
+    subscribeCancel() {
+        document.getElementById('cancel').addEventListener('click', event => {
+            event.preventDefault();
+            document.getElementById('userForm').reset();
+            this.userModel = emptyUser();
         })
     }
 
@@ -109,28 +119,11 @@ class Users {
     }
 
     postUser(userModel) {
-
-        // this.userService.postUser(userModel)
-        //     .then(() => this.getAllUsers())
+        this.userService.postUser(userModel)
+            .then(() => this.getAllUsers())
     }
 
 }
 
 new Users();
-
-const userService = new UserService();
-// userService.postUser(new UserModel(
-//     'Lucas',
-//     'Manzanelli',
-//     'l@l',
-//     '1133151180',
-//     '1',
-//     'Buenos Aires',
-//     '1666',
-//     '14/07/1995',
-//     'Single',
-//     'des',
-// ))
-//     .then(res => console.log(res))
-
 

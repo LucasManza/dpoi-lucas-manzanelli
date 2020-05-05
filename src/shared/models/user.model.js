@@ -2,7 +2,7 @@ export class UserModel {
     constructor(
         firstName, lastName, mail, phone,
         street, province, postalCode,
-        birthDate, martialStatus, description,
+        birthDate, single, description,
         id = undefined) {
         this.id = id;
         this.firstName = firstName;
@@ -10,10 +10,10 @@ export class UserModel {
         this.mail = mail;
         this.phone = phone;
         this.street = street;
-        this.province = street;
+        this.province = province;
         this.postalCode = postalCode;
         this.birthDate = birthDate;
-        this.martialStatus = martialStatus;
+        this.single = single;
         this.description = description;
     }
 

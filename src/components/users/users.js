@@ -35,7 +35,7 @@ class Users {
         row.insertCell().appendChild(this.icon('fa-edit'));
         row.insertCell().appendChild(this.icon('fa-trash'))
             .addEventListener("click", () => {
-                this.deleteUser(simpleUserModel)
+                this.deleteUser(simpleUserModel.id)
             });
     };
 
@@ -102,6 +102,13 @@ class Users {
 
     getAllUsers() {
         this.renderLoading();
+
+        var table = document.getElementById("usersTable");
+
+        for (var i = table.rows.length - 1; i > 0; i--) {
+            table.deleteRow(i);
+        }
+
         this.userService.requestUsers().then(users => {
             if (users.length === 0)
                 this.renderNoneUsers();
